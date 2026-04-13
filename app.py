@@ -222,8 +222,7 @@ def ghost():
 
 def run_flask_api():
     print("بدء تشغيل خادم API...")
-    app.run(host='0.0.0.0', port=6002, debug=False)
-
+    app.run(host='0.0.0.0', port=5000, debug=False)
 def generate_random_color():
     color_list = [
         "[00FF00][b][c]",
@@ -337,7 +336,7 @@ def GeT_Time(timestamp):
 def Time_En_Ar(t): 
     return ' '.join(t.replace("Day","يوم").replace("Hour","ساعة").replace("Min","دقيقة").replace("Sec","ثانية").split(" - "))
     
-Thread(target = AuTo_ResTartinG , daemon = True).start()
+threading.Thread(target=AuTo_ResTartinG, daemon=True).start()
 
 ACCOUNTS = []
 
